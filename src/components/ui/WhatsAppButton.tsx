@@ -1,0 +1,34 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { clinicInfo } from "@/data/content";
+
+export default function WhatsAppButton() {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+
+    return (
+        <a
+            href={clinicInfo.whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#25D366]/50"
+            aria-label="Fale conosco no WhatsApp"
+        >
+            <div className="absolute inset-0 rounded-full animate-ping bg-[#25D366] opacity-20"></div>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-8 w-8 relative z-10"
+            >
+                <path d="M12.031 2.012c-5.46 0-9.897 4.437-9.897 9.898 0 1.758.463 3.468 1.341 4.981L2 22.01l5.242-1.375c1.458.82 3.109 1.252 4.789 1.252h.004c5.457 0 9.893-4.438 9.893-9.897 0-2.645-1.028-5.132-2.894-7.001-1.87-1.87-4.354-2.901-7.003-2.903zm0 17.81h-.003c-1.488 0-2.946-.4-4.227-1.157l-.304-.18-3.136.822.836-3.057-.197-.314c-.832-1.326-1.272-2.853-1.272-4.433 0-4.597 3.738-8.332 8.341-8.334 2.228 0 4.323.868 5.895 2.44 1.573 1.573 2.439 3.668 2.439 5.894 0 4.597-3.738 8.336-8.342 8.338zm4.582-6.262c-.251-.125-1.483-.732-1.714-.816-.23-.083-.398-.125-.566.126-.167.252-.647.817-.795.984-.145.167-.293.187-.544.062-.25-.125-1.059-.39-2.017-1.246-.745-.664-1.249-1.487-1.396-1.738-.147-.251-.016-.386.11-.512.113-.112.25-.292.376-.438.125-.146.166-.25.251-.417.083-.167.042-.313-.021-.438-.063-.125-.566-1.365-.776-1.869-.203-.491-.41-.424-.566-.432-.146-.008-.314-.008-.481-.008-.168 0-.441.063-.672.313-.23.251-.88.859-.88 2.094 0 1.235.9 2.43 1.026 2.597.126.167 1.77 2.7 4.283 3.784.598.258 1.065.412 1.428.527.602.19 1.15.163 1.583.1.484-.07 1.483-.606 1.693-1.193.21-.587.21-1.09.146-1.193-.062-.104-.23-.166-.481-.291z" />
+            </svg>
+        </a>
+    );
+}
