@@ -5,15 +5,15 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function AboutSection() {
     const benefits = [
-        "Atendimento Humanizado",
-        "Equipe Multidisciplinar",
-        "Ambiente Acolhedor",
-        "Tecnologia e Segurança"
+        "Cuidado Humanizado e Ético",
+        "Especialistas em Diversas Áreas",
+        "Estrutura Moderna e Confortável",
+        "Tecnologia Diagnóstica Avançada"
     ];
 
     return (
         <section id="sobre" className="py-20 bg-gray-50/50">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                     <motion.div
@@ -53,15 +53,12 @@ export default function AboutSection() {
                     >
                         <h2 className="text-sm font-bold text-primary tracking-wider uppercase mb-2">Sobre a Clínica</h2>
                         <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6 leading-tight">
-                            Seu bem-estar e o de sua família em primeiro lugar
+                            Saúde completa e especializada no coração de Jucurutu.
                         </h3>
 
                         <article className="prose prose-lg text-gray-600 mb-8">
                             <p>
-                                A <strong>Central Clinic</strong> é uma clínica multidisciplinar localizada no coração de Jucurutu/RN, dedicada a proporcionar um atendimento de saúde integrado, ético e focado no paciente.
-                            </p>
-                            <p>
-                                Acreditamos que a saúde plena não se resume apenas à ausência de doenças, mas sim ao equilíbrio físico, mental e emocional. Por isso, reunimos especialistas de diversas áreas para oferecer um cuidado global.
+                                A <strong>Central Clinic</strong> nasceu para transformar o acesso à saúde em Jucurutu e região. Unimos uma equipe multidisciplinar e tecnologia de ponta para garantir que você não precise sair da cidade para ter um atendimento médico e odontológico de excelência. Nosso compromisso é com o seu equilíbrio físico e o cuidado global da sua família.
                             </p>
                         </article>
 

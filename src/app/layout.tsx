@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Rubik, Manrope } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const rubik = Rubik({
+  variable: "--font-rubik",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -38,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
+      <body className={`${rubik.variable} ${manrope.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <Header />
         <main className="flex-1">
           {children}

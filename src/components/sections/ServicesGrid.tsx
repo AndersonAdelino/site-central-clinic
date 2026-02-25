@@ -45,8 +45,8 @@ export default function ServicesGrid() {
     const exams = services.filter(s => s.category === 'exame');
 
     return (
-        <section id="servicos" className="py-20 bg-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="especialidades" className="py-20 bg-white">
+            <div className="max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-sm font-bold text-primary tracking-wider uppercase mb-2">Excelência em Saúde</h2>
@@ -102,7 +102,7 @@ export default function ServicesGrid() {
                 </div>
 
                 {/* EXAMES */}
-                <div>
+                <div id="exames" className="scroll-mt-24">
                     <div className="flex items-center gap-4 mb-8">
                         <div className="h-px bg-gray-200 flex-1"></div>
                         <h4 className="text-xl font-display font-bold text-gray-900 uppercase tracking-widest px-4 bg-white">Exames</h4>

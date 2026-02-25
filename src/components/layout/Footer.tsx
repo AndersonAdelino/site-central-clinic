@@ -5,7 +5,7 @@ import { HeartPulse, MapPin, Clock, Phone, Mail, Instagram, Facebook } from "luc
 export default function Footer() {
     return (
         <footer className="bg-gray-50 border-t border-gray-200">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div className="max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
                     {/* Brand Col */}
@@ -39,7 +39,8 @@ export default function Footer() {
                         <h3 className="font-semibold text-gray-900 mb-4 tracking-tight">Acesso Rápido</h3>
                         <ul className="space-y-3">
                             <li><Link href="/#sobre" className="text-sm text-gray-600 hover:text-primary transition-colors">Sobre Nós</Link></li>
-                            <li><Link href="/#servicos" className="text-sm text-gray-600 hover:text-primary transition-colors">Nossos Serviços</Link></li>
+                            <li><Link href="/#especialidades" className="text-sm text-gray-600 hover:text-primary transition-colors">Especialidades</Link></li>
+                            <li><Link href="/#exames" className="text-sm text-gray-600 hover:text-primary transition-colors">Exames</Link></li>
                         </ul>
                     </div>
 

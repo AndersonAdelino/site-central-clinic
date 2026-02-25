@@ -6,7 +6,7 @@ import { ShieldCheck } from "lucide-react";
 export default function InsuranceSection() {
     return (
         <section id="convenios" className="py-20 bg-white border-y border-gray-100">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
                     <div className="max-w-2xl">

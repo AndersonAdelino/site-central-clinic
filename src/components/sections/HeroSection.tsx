@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, Star, StarHalf } from "lucide-react";
 import { clinicInfo } from "@/data/content";
 
 export default function HeroSection() {
     return (
-        <section className="relative overflow-hidden bg-white pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24">
+        <section className="relative overflow-hidden bg-white pt-32 md:pt-24 lg:pt-40 pb-16 md:pb-24">
             {/* Background Graphic Elements */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
 
-            <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1080px] relative mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
                     {/* Text Content */}
@@ -21,11 +21,11 @@ export default function HeroSection() {
                         transition={{ duration: 0.6 }}
                         className="max-w-2xl"
                     >
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 leading-tight tracking-tight mb-6">
-                            Clínica Médica e Odontológica em <span className="text-primary">Jucurutu</span>
+                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
+                            Onde seu <span className="text-primary italic">sorriso</span> e <span className="text-primary italic">saúde</span> é a nossa missão
                         </h1>
-                        <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                            Atendimento multidisciplinar e humanizado para você e sua família. Excelência em saúde, estrutura moderna e o conforto que você merece.
+                        <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-xl">
+                            Das consultas especializadas aos exames diagnósticos. Oferecemos uma estrutura completa para garantir segurança e bem estar em cada atendimento.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
@@ -33,28 +33,29 @@ export default function HeroSection() {
                                 href={clinicInfo.whatsappLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-1"
                             >
                                 <Phone className="h-5 w-5" />
                                 <span>Agendar Consulta</span>
                             </a>
                             <a
-                                href="#servicos"
-                                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-200 hover:border-primary text-gray-700 hover:text-primary px-8 py-4 rounded-full font-semibold transition-all"
+                                href="#especialidades"
+                                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-100 hover:border-primary text-gray-700 hover:text-primary px-8 py-4 rounded-full font-bold transition-all"
                             >
-                                <span>Conheça os Serviços</span>
+                                <span>Especialidades</span>
                                 <ArrowRight className="h-5 w-5" />
                             </a>
                         </div>
 
-                        <div className="mt-10 flex items-center gap-4 text-sm font-medium text-gray-500">
-                            <div className="flex -space-x-2">
-                                {/* Fallback avatar circles */}
-                                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-200"></div>
-                                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-300"></div>
-                                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-400"></div>
+                        <div className="mt-10 flex flex-col gap-2">
+                            <div className="flex items-center gap-1">
+                                {[1, 2, 3, 4].map((star) => (
+                                    <Star key={star} className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
+                                ))}
+                                <StarHalf className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
+                                <span className="ml-2 font-display font-bold text-lg text-gray-900">4.8/5.0</span>
                             </div>
-                            <p>Mais de <strong className="text-gray-900">5.000+</strong> pacientes atendidos</p>
+                            <p className="text-sm font-medium text-gray-500">Avaliação média baseada na satisfação de nossos pacientes</p>
                         </div>
                     </motion.div>
 
@@ -73,13 +74,6 @@ export default function HeroSection() {
                                 alt="Consultório médico moderno na Central Clinic em Jucurutu"
                                 className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
                             />
-                            <div className="absolute inset-0 z-20 flex items-center justify-center">
-                                {/* Decorative element over image */}
-                                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl max-w-[80%] text-center">
-                                    <p className="font-display font-bold text-xl text-primary mb-1">Qualidade de Vida</p>
-                                    <p className="text-sm font-medium text-gray-600">A saúde da sua família em boas mãos.</p>
-                                </div>
-                            </div>
                         </div>
                     </motion.div>
 
