@@ -57,11 +57,11 @@ export default function ServicesGrid() {
                             Nossos<br />
                             <span className="text-primary italic">Serviços</span>
                         </h3>
-                        <p className="text-foreground text-lg md:text-xl font-sans leading-relaxed mb-10 max-w-sm">
+                        <p className="text-foreground/70 text-lg md:text-xl font-sans leading-relaxed mb-10 max-w-sm">
                             Ampla variedade de especialidades médicas e exames em um só lugar, com equipamentos de última geração e profissionais focados em você.
                         </p>
                         <div className="mt-auto hidden lg:block">
-                            <p className="text-sm text-foreground font-bold uppercase tracking-widest mb-4">Deslize para explorar</p>
+                            <p className="text-sm text-foreground/40 font-bold uppercase tracking-widest mb-4">Deslize para explorar</p>
                             <div className="w-px h-24 bg-foreground/10 animate-pulse"></div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ export default function ServicesGrid() {
                                                 {service.title}
                                             </h5>
 
-                                            <p className="text-foreground text-base mb-8 leading-relaxed font-sans flex-grow relative z-10">
+                                            <p className="text-foreground/70 text-base mb-8 leading-relaxed font-sans flex-grow relative z-10">
                                                 {service.shortDescription}
                                             </p>
 
@@ -142,7 +142,7 @@ export default function ServicesGrid() {
                                                 {service.title}
                                             </h5>
 
-                                            <p className="text-foreground text-base mb-8 leading-relaxed font-sans flex-grow relative z-10">
+                                            <p className="text-foreground/70 text-base mb-8 leading-relaxed font-sans flex-grow relative z-10">
                                                 {service.shortDescription}
                                             </p>
 

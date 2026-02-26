@@ -41,7 +41,7 @@ export default function AboutSection() {
                             </span> no coração de Jucurutu.
                         </h3>
 
-                        <article className="prose prose-lg text-foreground mb-10 font-sans">
+                        <article className="prose prose-lg text-foreground/70 mb-10 font-sans">
                             <p className="text-lg md:text-xl leading-relaxed">
                                 Nascemos para transformar o acesso à saúde na região. Unimos uma equipe multidisciplinar e tecnologia de ponta para garantir um atendimento médico e odontológico de excelência. Nós cuidamos do que realmente importa: o bem-estar da sua família.
                             </p>
@@ -97,7 +97,7 @@ export default function AboutSection() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-foreground text-xl leading-none">Anos de</p>
-                                    <p className="text-foreground text-sm uppercase tracking-widest mt-1">Experiência</p>
+                                    <p className="text-foreground/50 text-sm uppercase tracking-widest mt-1">Experiência</p>
                                 </div>
                             </div>
                         </div>

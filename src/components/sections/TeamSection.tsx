@@ -44,7 +44,7 @@ export default function TeamSection() {
 
                                 <div className="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform">
                                     <h4 className="text-2xl font-display font-bold mb-1">{doctor.name}</h4>
-                                    <p className="text-white font-medium">{doctor.specialty}</p>
+                                    <p className="text-white/90 font-medium">{doctor.specialty}</p>
                                 </div>
                             </div>
                         </motion.div>

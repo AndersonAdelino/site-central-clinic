@@ -34,7 +34,7 @@ export default function InsuranceSection() {
                             className="flex items-center justify-center bg-gray-50 rounded-xl px-8 py-6 w-[160px] md:w-[200px] hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-100 grayscale hover:grayscale-0"
                         >
                             {/* Fallback to text if logos are missing */}
-                            <span className="font-display font-bold text-gray-600 text-lg md:text-xl text-center">
+                            <span className="font-display font-bold text-gray-500 text-lg md:text-xl text-center">
                                 {insurance.name}
                             </span>
                         </div>
