@@ -28,7 +28,7 @@ export default function HeroSection() {
                             <span className="text-primary">saúde</span> é a<br className="hidden md:block" />
                             nossa missão.
                         </h1>
-                        <p className="text-lg md:text-xl text-foreground/70 mb-10 leading-relaxed max-w-lg font-sans">
+                        <p className="text-lg md:text-xl text-foreground/85 mb-10 leading-relaxed max-w-lg font-sans">
                             Das consultas especializadas aos exames diagnósticos. Oferecemos uma estrutura premium para garantir segurança e bem-estar em cada atendimento.
                         </p>
 
@@ -74,7 +74,7 @@ export default function HeroSection() {
                                 <StarHalf className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
                             </div>
                             <span className="block font-display font-bold text-2xl text-foreground mb-1">4.8/5.0</span>
-                            <p className="text-xs font-sans text-foreground/60 leading-tight">Avaliação baseada na satisfação dos nossos pacientes</p>
+                            <p className="text-xs font-sans text-foreground/80 leading-tight">Avaliação baseada na satisfação dos nossos pacientes</p>
                         </motion.div>
 
                         <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-xl border border-foreground/5 bg-muted">

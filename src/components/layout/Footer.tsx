@@ -21,14 +21,14 @@ export default function Footer() {
                                 </span>
                             </div>
                         </Link>
-                        <p className="text-sm text-gray-500 max-w-xs leading-relaxed">
+                        <p className="text-sm text-gray-600 max-w-xs leading-relaxed">
                             Clínica multidisciplinar com foco em atendimento humanizado e excelência em serviços de saúde para você e sua família.
                         </p>
                         <div className="flex items-center gap-4 pt-2">
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Acessar Instagram da Central Clinic">
+                            <a href="#" className="text-gray-500 hover:text-primary transition-colors" aria-label="Acessar Instagram da Central Clinic">
                                 <Instagram className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Acessar Facebook da Central Clinic">
+                            <a href="#" className="text-gray-500 hover:text-primary transition-colors" aria-label="Acessar Facebook da Central Clinic">
                                 <Facebook className="h-5 w-5" />
                             </a>
                         </div>
@@ -93,10 +93,10 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-xs text-gray-500 text-center md:text-left">
+                    <p className="text-xs text-gray-600 text-center md:text-left">
                         &copy; {new Date().getFullYear()} Central Clinic Jucurutu. Todos os direitos reservados.
                     </p>
-                    <p className="text-xs text-gray-400">
+                    <p className="text-xs text-gray-600">
                         Desenvolvido com excelência
                     </p>
                 </div>
