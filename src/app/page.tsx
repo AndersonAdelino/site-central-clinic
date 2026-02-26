@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
-import ServicesGrid from "@/components/sections/ServicesGrid";
-import LocationSection from "@/components/sections/LocationSection";
 import { clinicInfo } from "@/data/content";
+
+const AboutSection = dynamic(() => import("@/components/sections/AboutSection"), { ssr: true });
+const ServicesGrid = dynamic(() => import("@/components/sections/ServicesGrid"), { ssr: true });
+const LocationSection = dynamic(() => import("@/components/sections/LocationSection"), { ssr: true });
 
 export default function Home() {
   const jsonLd = {

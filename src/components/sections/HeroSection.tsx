@@ -86,11 +86,11 @@ export default function HeroSection() {
 
                         <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-xl border border-foreground/5 bg-muted">
                             <Image
-                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600&auto=format&fit=crop"
                                 alt="Atendimento Central Clinic"
                                 fill
                                 priority
-                                sizes="(max-width: 768px) 100vw, 50vw"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                                 className="object-cover"
                             />
                         </div>
