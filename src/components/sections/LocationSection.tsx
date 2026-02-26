@@ -21,6 +21,7 @@ export default function LocationSection() {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                             className="absolute inset-0"
+                            title="Localização da Central Clinic no Google Maps"
                         ></iframe>
                     </div>
 

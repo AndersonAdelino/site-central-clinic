@@ -25,10 +25,10 @@ export default function Footer() {
                             Clínica multidisciplinar com foco em atendimento humanizado e excelência em serviços de saúde para você e sua família.
                         </p>
                         <div className="flex items-center gap-4 pt-2">
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Acessar Instagram da Central Clinic">
                                 <Instagram className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Acessar Facebook da Central Clinic">
                                 <Facebook className="h-5 w-5" />
                             </a>
                         </div>
