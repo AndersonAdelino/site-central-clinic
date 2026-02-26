@@ -4,75 +4,86 @@ import { motion } from "framer-motion";
 import { Phone, ArrowRight, Star, StarHalf } from "lucide-react";
 import { clinicInfo } from "@/data/content";
 
+import Image from "next/image";
+
 export default function HeroSection() {
     return (
-        <section className="relative overflow-hidden bg-white pt-32 md:pt-24 lg:pt-40 pb-16 md:pb-24">
-            {/* Background Graphic Elements */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <section className="relative overflow-hidden bg-background pt-32 md:pt-40 lg:pt-48 pb-16 md:pb-32">
+            {/* Background Grain/Depth Elements instead of Glassmorphism */}
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 h-[500px] w-[500px] rounded-full bg-secondary/10 blur-3xl" />
 
-            <div className="max-w-[1080px] relative mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+            <div className="max-w-[1280px] relative mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-8 items-start">
 
-                    {/* Text Content */}
+                    {/* Left: Massive Typographic Content (Asymmetric 60/40 Split) */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="max-w-2xl"
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="w-full lg:w-[60%] z-10"
                     >
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
-                            Onde seu <span className="text-primary italic">sorriso</span> e <span className="text-primary italic">saúde</span> é a nossa missão
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[88px] font-display font-bold text-foreground leading-[1.05] tracking-tight mb-8">
+                            Onde seu <br className="hidden md:block" />
+                            <span className="text-primary">sorriso</span> e <br className="hidden md:block" />
+                            <span className="text-primary">saúde</span> é a<br className="hidden md:block" />
+                            nossa missão.
                         </h1>
-                        <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-xl">
-                            Das consultas especializadas aos exames diagnósticos. Oferecemos uma estrutura completa para garantir segurança e bem estar em cada atendimento.
+                        <p className="text-lg md:text-xl text-foreground/70 mb-10 leading-relaxed max-w-lg font-sans">
+                            Das consultas especializadas aos exames diagnósticos. Oferecemos uma estrutura premium para garantir segurança e bem-estar em cada atendimento.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                             <a
                                 href={clinicInfo.whatsappLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-1"
+                                className="inline-flex items-center justify-center gap-3 bg-cta hover:bg-cta-dark text-white px-8 py-4 rounded-lg font-sans font-bold transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1"
                             >
                                 <Phone className="h-5 w-5" />
                                 <span>Agendar Consulta</span>
                             </a>
                             <a
                                 href="#especialidades"
-                                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-100 hover:border-primary text-gray-700 hover:text-primary px-8 py-4 rounded-full font-bold transition-all"
+                                className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-foreground/10 hover:border-primary text-foreground hover:text-primary px-8 py-4 rounded-lg font-sans font-bold transition-all duration-300"
                             >
                                 <span>Especialidades</span>
                                 <ArrowRight className="h-5 w-5" />
                             </a>
                         </div>
-
-                        <div className="mt-10 flex flex-col gap-2">
-                            <div className="flex items-center gap-1">
-                                {[1, 2, 3, 4].map((star) => (
-                                    <Star key={star} className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
-                                ))}
-                                <StarHalf className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
-                                <span className="ml-2 font-display font-bold text-lg text-gray-900">4.8/5.0</span>
-                            </div>
-                            <p className="text-sm font-medium text-gray-500">Avaliação média baseada na satisfação de nossos pacientes</p>
-                        </div>
                     </motion.div>
 
-                    {/* Image/Visual Content */}
+                    {/* Right: Overlapping Visual Content */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative lg:ml-auto"
+                        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                        className="w-full lg:w-[40%] relative mt-10 lg:mt-0"
                     >
-                        <div className="relative rounded-2xl md:rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
-                            {/* Note: In a real scenario you would put the real clinic image here */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 mix-blend-multiply z-10 rounded-2xl md:rounded-3xl"></div>
-                            <img
+                        {/* Review Badge Overlaid */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.8 }}
+                            className="absolute -top-6 -right-6 md:-top-10 md:-right-10 bg-white p-6 rounded-xl shadow-xl z-20 border border-foreground/5 max-w-[200px]"
+                        >
+                            <div className="flex items-center gap-1 mb-2">
+                                <Star className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
+                                <Star className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
+                                <Star className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
+                                <Star className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
+                                <StarHalf className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
+                            </div>
+                            <span className="block font-display font-bold text-2xl text-foreground mb-1">4.8/5.0</span>
+                            <p className="text-xs font-sans text-foreground/60 leading-tight">Avaliação baseada na satisfação dos nossos pacientes</p>
+                        </motion.div>
+
+                        <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-xl border border-foreground/5">
+                            <div className="absolute inset-0 bg-primary/20 mix-blend-multiply z-10 transition-opacity duration-500 hover:opacity-0"></div>
+                            <Image
                                 src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop"
                                 alt="Consultório médico moderno na Central Clinic em Jucurutu"
-                                className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
+                                fill
+                                className="object-cover"
                             />
                         </div>
                     </motion.div>

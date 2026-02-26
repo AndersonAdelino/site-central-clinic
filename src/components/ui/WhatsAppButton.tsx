@@ -1,17 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { clinicInfo } from "@/data/content";
 
 export default function WhatsAppButton() {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) return null;
-
     return (
         <a
             href={clinicInfo.whatsappLink}

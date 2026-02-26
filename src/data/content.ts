@@ -16,19 +16,19 @@ export const doctors = [
         id: "luiz-fernando-schuh",
         name: "Dr. Luiz Fernando Schuh",
         specialty: "Ortopedia",
-        imagePath: "/doctors/luiz-fernando.webp"
+        imagePath: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=500&auto=format&fit=crop"
     },
     {
         id: "amelia-amaral",
         name: "Dra. Amélia Amaral",
         specialty: "Ginecologia e Obstetrícia",
-        imagePath: "/doctors/amelia-amaral.webp"
+        imagePath: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=500&auto=format&fit=crop"
     },
     {
         id: "pedro-nunes",
         name: "Dr. Pedro Nunes",
         specialty: "Pediatria",
-        imagePath: "/doctors/pedro-nunes.webp"
+        imagePath: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=500&auto=format&fit=crop"
     }
 ];
 

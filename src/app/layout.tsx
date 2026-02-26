@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
-import { Rubik, Manrope } from "next/font/google";
+import { Figtree, Noto_Sans } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
-const rubik = Rubik({
-  variable: "--font-rubik",
+const figtree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -39,13 +38,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${rubik.variable} ${manrope.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
+      <body className={`${figtree.variable} ${notoSans.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <Header />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
-        <WhatsAppButton />
       </body>
     </html>
   );

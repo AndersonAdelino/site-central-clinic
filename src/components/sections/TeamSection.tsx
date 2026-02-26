@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { doctors } from "@/data/content";
 
 export default function TeamSection() {
@@ -29,15 +30,13 @@ export default function TeamSection() {
                             className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100"
                         >
                             <div className="aspect-[4/5] overflow-hidden relative bg-gray-200">
-                                {/* Fallback image if doctor image fails or is missing - In real life we use the doctor.imagePath */}
-                                <img
+                                {/* Fallback image if doctor image fails or is missing */}
+                                <Image
                                     src={`https://ui-avatars.com/api/?name=${encodeURIComponent(doctor.name)}&background=0D8ABC&color=fff&size=512&font-size=0.33`}
                                     alt={doctor.name}
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                    onError={(e) => {
-                                        // Fail-safe to avatar
-                                        e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(doctor.name)}&background=00AEEF&color=fff&size=512`;
-                                    }}
+                                    fill
+                                    className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                    unoptimized
                                 />
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-80"></div>
