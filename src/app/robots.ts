@@ -2,7 +2,7 @@ export const dynamic = "force-static";
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = "https://centralclinicjucurutu.com.br"; // Update to actual domain
+    const baseUrl = "https://site-central-clinic-vercel-app.vercel.app";
 
     return {
         rules: {

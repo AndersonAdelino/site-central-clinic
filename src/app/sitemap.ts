@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 import { services } from "@/data/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://centralclinicjucurutu.com.br"; // Update to actual domain
+    const baseUrl = "https://site-central-clinic-vercel-app.vercel.app";
 
     const serviceUrls: MetadataRoute.Sitemap = services.map((service) => ({
         url: `${baseUrl}/servicos/${service.slug}`,

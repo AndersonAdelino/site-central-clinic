@@ -9,9 +9,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": clinicInfo.name,
-    "image": "https://centralclinicjucurutu.com.br/placeholder.jpg",
-    "@id": "https://centralclinicjucurutu.com.br/",
-    "url": "https://centralclinicjucurutu.com.br/",
+    "image": "https://site-central-clinic-vercel-app.vercel.app/og-image.jpg",
+    "@id": "https://site-central-clinic-vercel-app.vercel.app/",
+    "url": "https://site-central-clinic-vercel-app.vercel.app/",
     "telephone": clinicInfo.phone,
     "address": {
       "@type": "PostalAddress",

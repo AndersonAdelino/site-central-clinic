@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // removed output: export to let Vercel handle standard Next.js behavior
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
+  trailingSlash: false,
   reactStrictMode: true,
 };
 
