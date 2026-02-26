@@ -1,30 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Phone, ArrowRight, Star, StarHalf } from "lucide-react";
-import { clinicInfo } from "@/data/content";
-
+import { Star, StarHalf, Phone, ShieldCheck, HeartPulse } from "lucide-react";
 import Image from "next/image";
+import { clinicInfo } from "@/data/content";
 
 export default function HeroSection() {
     return (
-        <section className="relative overflow-hidden bg-background pt-32 md:pt-40 lg:pt-48 pb-16 md:pb-32">
-            {/* Background Grain/Depth Elements instead of Glassmorphism */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 h-[500px] w-[500px] rounded-full bg-secondary/10 blur-3xl" />
+        <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+            {/* Background Decor */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-background/30 rounded-l-[5rem] -z-10 hidden lg:block"></div>
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
 
-            <div className="max-w-[1280px] relative mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-8 items-start">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
 
-                    {/* Left: Massive Typographic Content (Asymmetric 60/40 Split) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="w-full lg:w-[60%] z-10"
-                    >
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[88px] font-display font-bold text-foreground leading-[1.05] tracking-tight mb-8">
-                            Onde seu <br className="hidden md:block" />
-                            <span className="text-primary">sorriso</span> e <br className="hidden md:block" />
+                    {/* Left content */}
+                    <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left opacity-0 animate-fade-in-up">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest mb-6">
+                            <ShieldCheck className="h-4 w-4" />
+                            Atendimento Seguro e Ético
+                        </div>
+
+                        <h1 className="text-5xl md:text-7xl font-display font-bold text-gray-900 leading-[1.05] tracking-tight mb-6">
+                            Onde seu <br />
                             <span className="text-primary">saúde</span> é a<br className="hidden md:block" />
                             nossa missão.
                         </h1>
@@ -32,41 +30,50 @@ export default function HeroSection() {
                             Das consultas especializadas aos exames diagnósticos. Oferecemos uma estrutura premium para garantir segurança e bem-estar em cada atendimento.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                             <a
                                 href={clinicInfo.whatsappLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-3 bg-cta hover:bg-cta-dark text-white px-8 py-4 rounded-lg font-sans font-bold transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1"
+                                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95"
                             >
                                 <Phone className="h-5 w-5" />
                                 <span>Agendar Consulta</span>
                             </a>
                             <a
                                 href="#especialidades"
-                                className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-foreground/10 hover:border-primary text-foreground hover:text-primary px-8 py-4 rounded-lg font-sans font-bold transition-all duration-300"
+                                className="w-full sm:w-auto flex items-center justify-center text-gray-600 hover:text-primary font-bold px-8 py-5 transition-colors"
                             >
-                                <span>Especialidades</span>
-                                <ArrowRight className="h-5 w-5" />
+                                Ver Especialidades
                             </a>
                         </div>
-                    </motion.div>
 
-                    {/* Right: Overlapping Visual Content */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                        className="w-full lg:w-[40%] relative mt-10 lg:mt-0"
-                    >
-                        {/* Review Badge Overlaid */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.8 }}
-                            className="absolute -top-6 -right-6 md:-top-10 md:-right-10 bg-white p-6 rounded-xl shadow-xl z-20 border border-foreground/5 max-w-[200px]"
-                        >
-                            <div className="flex items-center gap-1 mb-2">
+                        {/* Social Proof Mini */}
+                        <div className="mt-12 flex items-center gap-4 pt-8 border-t border-gray-100 w-full lg:w-auto justify-center lg:justify-start">
+                            <div className="flex -space-x-3">
+                                {[1, 2, 3, 4].map((i) => (
+                                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
+                                        <Image
+                                            src={`https://ui-avatars.com/api/?name=User+${i}&background=random`}
+                                            alt="Paciente"
+                                            width={40}
+                                            height={40}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="text-sm">
+                                <p className="font-bold text-gray-900 leading-none">+2.000 Pacientes</p>
+                                <p className="text-gray-500 mt-1">atendidos com excelência</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right content / Video or Image */}
+                    <div className="w-full lg:w-1/2 relative opacity-0 animate-scale-in animation-delay-200">
+                        {/* Floating Review Card */}
+                        <div className="absolute -bottom-6 -left-6 md:left-0 z-20 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden sm:block">
+                            <div className="flex gap-1 mb-2">
                                 <Star className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
                                 <Star className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
                                 <Star className="h-5 w-5 fill-[#FFB800] text-[#FFB800]" />
@@ -75,20 +82,22 @@ export default function HeroSection() {
                             </div>
                             <span className="block font-display font-bold text-2xl text-foreground mb-1">4.8/5.0</span>
                             <p className="text-xs font-sans text-foreground/60 leading-tight">Avaliação baseada na satisfação dos nossos pacientes</p>
-                        </motion.div>
+                        </div>
 
                         <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-xl border border-foreground/5 bg-muted">
-                            <div className="absolute inset-0 bg-primary/20 mix-blend-multiply z-10 transition-opacity duration-500 hover:opacity-0"></div>
                             <Image
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop"
-                                alt="Consultório médico moderno na Central Clinic em Jucurutu"
+                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop"
+                                alt="Atendimento Central Clinic"
                                 fill
                                 priority
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 500px"
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-cover"
                             />
                         </div>
-                    </motion.div>
+
+                        {/* Decorative element */}
+                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl -z-10"></div>
+                    </div>
 
                 </div>
             </div>
