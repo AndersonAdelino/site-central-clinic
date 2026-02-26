@@ -122,6 +122,7 @@ export default function ServicePageClient({ service, displayDoctors }: ServicePa
                                                             src={doc.imagePath || `https://ui-avatars.com/api/?name=${encodeURIComponent(doc.name)}&background=00AEEF&color=fff&size=512`}
                                                             alt={doc.name}
                                                             fill
+                                                            sizes="(max-width: 768px) 100vw, 200px"
                                                             className="object-cover hover:scale-110 transition-transform duration-500"
                                                             unoptimized
                                                         />

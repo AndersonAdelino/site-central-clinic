@@ -68,11 +68,12 @@ export default function AboutSection() {
                         className="w-full lg:w-7/12 relative min-h-[500px] md:min-h-[600px] mt-12 lg:mt-0"
                     >
                         {/* Primary Big Image */}
-                        <div className="absolute top-0 right-0 w-4/5 h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] z-10 border border-foreground/5">
+                        <div className="absolute top-0 right-0 w-4/5 h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] z-10 border border-foreground/5 bg-muted">
                             <Image
-                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop"
                                 alt="Dentista trabalhando"
                                 fill
+                                sizes="(max-width: 768px) 80vw, 50vw"
                                 className="object-cover transition-transform duration-700 hover:scale-105"
                             />
                         </div>
@@ -80,9 +81,10 @@ export default function AboutSection() {
                         {/* Secondary Overlapping Image */}
                         <div className="absolute bottom-0 left-0 w-3/5 h-[300px] md:h-[350px] rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)] z-20 border-8 border-white bg-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1000&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop"
                                 alt="Médico conversando com paciente"
                                 fill
+                                sizes="(max-width: 768px) 60vw, 35vw"
                                 className="object-cover transition-transform duration-700 hover:scale-105"
                             />
                         </div>

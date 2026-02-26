@@ -35,6 +35,7 @@ export default function TeamSection() {
                                     src={`https://ui-avatars.com/api/?name=${encodeURIComponent(doctor.name)}&background=0D8ABC&color=fff&size=512&font-size=0.33`}
                                     alt={doctor.name}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 350px"
                                     className="object-cover transform group-hover:scale-105 transition-transform duration-500"
                                     unoptimized
                                 />

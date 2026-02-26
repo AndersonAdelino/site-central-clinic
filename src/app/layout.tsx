@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Central Clinic Jucurutu",
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

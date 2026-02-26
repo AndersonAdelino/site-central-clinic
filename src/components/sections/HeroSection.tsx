@@ -77,12 +77,14 @@ export default function HeroSection() {
                             <p className="text-xs font-sans text-foreground/60 leading-tight">Avaliação baseada na satisfação dos nossos pacientes</p>
                         </motion.div>
 
-                        <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-xl border border-foreground/5">
+                        <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-xl border border-foreground/5 bg-muted">
                             <div className="absolute inset-0 bg-primary/20 mix-blend-multiply z-10 transition-opacity duration-500 hover:opacity-0"></div>
                             <Image
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop"
                                 alt="Consultório médico moderno na Central Clinic em Jucurutu"
                                 fill
+                                priority
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 500px"
                                 className="object-cover"
                             />
                         </div>
